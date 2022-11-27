@@ -7,10 +7,21 @@
     <title>Tab Group</title>
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <script>
-        document.title = window.location.search.substring(1)
+        let tcName = window.location.search.substring(1)
+        document.title = tcName
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector('#td').innerHTML = tcName 
+        })
     </script>
+    <div class="tc">
+        <div>
+            <span>📁 </span><span id="td">TST</span>
+            <br>
+        </div>
+    </div>
 </body>
 </html>
